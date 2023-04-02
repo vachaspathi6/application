@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+}
+.flexbox .no,
+.no-flexbox .yes {display: none}
+.container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  color: #E66A20;
+  word-wrap: break-word;
+}
+a:visited {
+  color: #F00;
+}
+
+header,
+footer {text-align: center;}
+.container {
+  width: 75%;
+  margin: 1em auto;
+}
+.cell {
+  overflow: hidden;
+}
+.container .row .cell.header {
+  color: #FFF;
+  background-color: #222;
+}
+.row {
+  background: green;
+}
+.row.alt {
+  background: #DEDEDE;
+}
+.flexbox .container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.boxshadow .container {
+  box-shadow: 1px 1px 10px 1px #777;
+}
+.flexbox .container .row {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flexbox .row .cell {
+  flex: 1;
+  width: 25%;
+}
+.row .cell {
+  padding: 1em;
+  border: 1px solid #222;
+}
+@media all and (max-width: 43.125em) {
+
+  .header {display: none;}
+  .flexbox .row .cell:before {
+    content: attr(title);
+    width: 75px;
+    display: block;
+    background: #222;
+    color: #fff;
+    padding: .25em .5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .flexbox .container .row {
+    flex-direction: column;
+  }
+  .flexbox .row .cell {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    padding: 3em 0 1em 1em;
+  }
+
+}
+
+/* Fallbacks */
+
+.no-flexbox .container {
+   display: table;
+}
+.no-flexbox .row {
+  display: table-row;
+}
+.no-flexbox .cell {
+  display: table-cell;
+}
+
+  </style>
+</head>
+<body>
+<script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+<section>
+  <header><h1>Responsive Flexbox table with Fallback</h1>
+    <div class="yes">Hooray! Your browser supports flexbox!</div>
+    <div class="no">Bummer, your browser doesn't support flexbox</div>
+    </header>
+  <div class="container">
+      <div class="row header">
+        <div class="cell header">Insurance Policy</div>
+        <div class="cell header">Friend</div>
+        <div class="cell header">Website</div>
+        <div class="cell header">Category</div>
+      </div>
+      <div class="row">
+        <div class="cell" title="Name"><span>Ian Svoboda</span></div>
+        <div class="cell" title="Friend"><span>Boniface McAwesome</span></div>
+        <div class="cell" title="Website">
+          <span><a href="AllSQLcommands.pdf" download>ALL SQL Commands</a></span>
+        </div>
+        <div class="cell" title="Category"><span>Portfolio</span></div>
+      </div>
+      <div class="row alt">
+        <div class="cell" title="Name"><span>Bob Buttons</span></div>
+        <div class="cell" title="Friend"><span>Jim Test</span></div>
+        <div class="cell" title="Website">
+          <span><a href="https://publuu.com/flip-book/108523/291148">https://publuu.com/flip-book/108523/291148</a></span>
+        </div>
+        <div class="cell" title="Category"><span>Ecommerce</span></div>
+      </div>
+      <div class="row">
+        <div class="cell" title="Name"><span>Johnny Appleseed</span></div>
+        <div class="cell" title="Friend"><span>Steve Jobs</span></div>
+        <div class="cell" title="Website">
+          <span><a href="https://publuu.com/flip-book/108523/291148">https://www.apple.com</a></span>
+        </div>
+        <div class="cell" title="Category"><span>Computers</span></div>
+      </div>
+      <div class="row alt">
+        <div class="cell" title="Name"><span>Boniface McAwesome</span></div>
+        <div class="cell" title="Friend"><span>Ian Svoboda</span></div>
+        <div class="cell" title="Website">
+          <span><a href="https://publuu.com/flip-book/108523/291148">http://www.wildstar-online.com</a></span>
+        </div>
+        <div class="cell" title="Category"><span>Gaming</span></div>
+      </div>
+  </div>
+  <footer>Created by <a href="https://publuu.com/flip-book/108523/291148" target="_blank">Ian Svoboda</a></footer>
+</section>
+</body>
+</html>
+{% endblock %}

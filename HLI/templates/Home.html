@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+body{
+        background-image: url('https://t4.ftcdn.net/jpg/02/49/95/25/360_F_249952586_kJkra0M0guFZDHvnamiUf70y1R0HJgMu.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+</style>
+<div  align="center">
+    <h1>{{user.username}}</h1>
+    {% include 'slider.html' %}
+</div>
+<div class="hero">
+
+</div>
+{% include 'footer.html' %}
+{% include 'chatboat.html' %}
+{% endblock %}
