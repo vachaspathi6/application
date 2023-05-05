@@ -67,17 +67,21 @@ def sign(request):
         uname = request.POST['uname']
         psswrd = request.POST['psswrd']
         tosend = 'You have successfully Registered'
-        sum=signingup(fname=fname,lname=lname,gmail=gmail,mobile=mobile,uname=uname,psswrd=psswrd)
-        sum.save()
-        send_mail(
-            'Thank you for contacting HLI System',
-            tosend,
-            'gvachaspathignaneswar@gmail.com',
-            [gmail],
-            fail_silently=False,
-        )
-        messages.info(request, 'Successfully Registered')
-        return render(request, "index.html")
+        sum = signingup(fname=fname, lname=lname, gmail=gmail, mobile=mobile, uname=uname, psswrd=psswrd)
+        if signingup.objects.filter(uname=uname).exists():
+            messages.info(request, 'Username already exists')
+            return render(request,"index.html")
+        else:
+             sum.save()
+             send_mail(
+                 'Thank you for contacting HLI System',
+                 tosend,
+                 'gvachaspathignaneswar@gmail.com',
+                 [gmail],
+                 fail_silently=False,
+             )
+             messages.info(request, 'Successfully Registered')
+             return render(request, "index.html")
     else:
         messages.info(request, 'Registration Failed')
         return render(request, "index.html")

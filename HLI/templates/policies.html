@@ -1,134 +1,450 @@
 {% extends 'base.html' %}
-{% load static %}
+
+{% block title %}POLICIES{% endblock %}
+
 {% block body %}
+
 <div  align="center">
-<marquee style="
-background: linear-gradient(90deg, rgba(169,250,1,1) 0%, rgba(254,255,0,1) 20%, rgba(255,0,0,1) 40%, rgba(0,255,248,1) 60%, rgba(110,4,248,1) 80%, rgba(255,0,185,1) 100%);
+    <marquee style="background: linear-gradient(90deg, rgba(169,250,1,1) 0%, rgba(254,255,0,1) 20%, rgba(255,0,0,1) 40%, rgba(0,255,248,1) 60%, rgba(110,4,248,1) 80%, rgba(255,0,185,1) 100%);
  font-family: Times New Roman; font-size: 50px; font-weight: bold;">Health and Life Insurance Policies</marquee>
 </div>
-<br><br>
-<div class="row">
-  <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://www.paybima.com/blog/wp-content/uploads/2021/10/02_Term-Insurance.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Term Life Insurance</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center>
-            <a href="{% url 'table1' %}" class="btn btn-primary">More Details</a></center>
-      </div>
+<br>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardio</title>
+</head>
+
+<body>
+    <style>
+        /* body{
+            margin: 0;
+            box-sizing: border-box;
+        } */
+        .main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .cardio {
+            position: relative;
+            height: 250px;
+            width: 350px;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 0px 4px rgba(45, 45, 45, 0.758);
+            z-index: 1;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 15px;
+        }
+
+        .cardio img {
+            height: 75%;
+            width: 100%;
+
+            border-radius: 15px 15px 0px 0px;
+            z-index: -1;
+        }
+
+        .inside {
+            position: absolute;
+            inset: 0;
+            height: 75%;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        .bootstrap-btn {
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            color: #fff;
+            background-color: #007bff;
+
+        }
+
+        /* .bootstrap-btn:focus, .bootstrap-btn.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+} */
+
+        .bootstrap-btn:hover {
+            background-color: #0069d9;
+
+        }
+
+        .bootstrap-btn:active {
+            background-color: #0048d9;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.345);
+
+        }
+
+        .details {
+            position: absolute;
+            height: 100%;
+            bottom: 0;
+            opacity: 0;
+            color: azure;
+            transition: .5s ease-in;
+            background-color: rgba(20, 20, 20, 0.578);
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .details p {
+            text-transform: uppercase;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            top: 40px;
+            margin: 5px;
+            letter-spacing: 1px;
+        }
+
+        .boost {
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0px;
+            height: 25%;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            flex-direction: row;
+            border-radius: 0px 0px 15px 15px;
+            background-color: rgb(252, 252, 252);
+        }
+
+        .inside:hover .details {
+            opacity: 1;
+        }
+    </style>
+    <div class="main">
+        <div class="cardio">
+            <img src="https://www.paybima.com/blog/wp-content/uploads/2021/10/02_Term-Insurance.jpg" alt="Network Error">
+            <div class="boost">
+                <h5>Term-Life Insurance </h5>
+                <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p> Term life insurance is a type of life insurance policy that provides coverage for a specified period of time,such as 10,20,or 30 years.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardio">
+            <img src="https://th.bing.com/th/id/OIP.zd5bpFRR3UBMU8OEz-SAxwHaE8?w=256&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="">
+            <div class="boost">
+                <h5>Health Insurance Policy</h5>
+                <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p> When an individual purchases a health insurance policy, they pay a premium to the insurance company in exchange for coverage of medical expenses. Including doctor visits, hospital stays, prescription medications, and other medical services.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardio">
+            <img src="https://thumbs.dreamstime.com/b/financial-investment-management-concept-finance-planning-logo-business-start-up-money-pension-plan-retire-savings-156371029.jpg" alt="">
+            <div class="boost">
+                <h5>Investment plans</h5>
+               <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>Investment plans refer to various financial instruments that are designed to help individuals grow their wealth by investing their money.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://s3.ap-south-1.amazonaws.com/img1.creditmantri.com/community/article/secure-your-childs-future-with-a-child-insurance-plan.jpg" alt="">
+            <div class="boost">
+                <h5>Child Savings</h5>
+               <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>A child saving policy is a type of investment plan that is designed to help parents or guardians save for their child's future financial needs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://cms-img.coverfox.com/life-insurance-while-planning-retirement.jpg" alt="">
+            <div class="boost">
+                <h3>Retirement Plans</h3>
+                <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>A retirement policy is a type of investment plan that is designed to help individuals save for retirement. </p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://th.bing.com/th/id/OIP.p4yuW7TtIwbhsf2W1jOqMAHaE8?pid=ImgDet&rs=1" alt="">
+            <div class="boost">
+                <h5>Family Insurance Plans</h5>
+               <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>A family insurance policy is a type of insurance policy that provides coverage to all members of a family under single policy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardio">
+            <img src="https://www.policybachat.com/ArticlesImages/1200.jpg" alt="">
+            <div class="boost">
+                <h5>Annuity Plans</h5>
+                <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>Annuity plans are investment products that are designed to provide a guaranteed income stream in retirement.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://cms-img.coverfox.com/personalize-two-wheeler-insurance-policy.webp" alt="">
+            <div class="boost">
+                <h5>Bike Insurance Plans</h5>
+              <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>A bike insurance plan is a type of insurance policy that provides coverage for a motorcycle or other two-wheeled vehicle.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://static.toiimg.com/thumb/msid-87297456,width-1280,height-720,resizemode-4/.jpg" alt="">
+            <div class="boost">
+                <h5>Car Insurance Plan</h5>
+                <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>A car insurance plan is a type of insurance policy that provides coverage for a motor vehicle,such as a car or truck.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://img.money.com/2020/09/Money-Pets-Final-red2.jpg" alt="">
+            <div class="boost">
+                <h5>Pet Insurance Policy</h5>
+                <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>Pet insurance is a type of insurance policy that provides coverage for veterinary expenses in case of injury or illness.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-insurance-logo-vector-image_80261.jpg" alt="">
+            <div class="boost">
+                <h5>Fixed Maturity Policy</h5>
+               <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>A fixed maturity policy is a type of investment plan in which the investor makes a lump-sum payment upfront and receives a fixed return on their amount.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cardio">
+            <img src="https://img.freepik.com/premium-vector/travel-insurance-flat-style-isometric-vector-illustration-health-insurance-concept_100456-7487.jpg" alt="">
+            <div class="boost">
+                <h5>Travel Insurance Policy</h5>
+               <a href="/table1"> <button class="bootstrap-btn" > Access </button> </a>
+            </div>
+            <div class="inside">
+                <div class="details">
+                    <p>Travel insurance is a type of insurance policy that provides coverage for unexpected events that may occur during a trip,such as medical emergency.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://cdn3.vectorstock.com/i/1000x1000/02/42/health-and-life-insurance-concept-vector-27190242.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Health Insurance Policy</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
+
+</body>
+
+</html>
+
+
+    <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+              <label class="form-label" for="form5Example21">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
       </div>
-    </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
   </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://thumbs.dreamstime.com/b/financial-investment-management-concept-finance-planning-logo-business-start-up-money-pension-plan-retire-savings-156371029.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Investment Plans</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://s3.ap-south-1.amazonaws.com/img1.creditmantri.com/community/article/secure-your-childs-future-with-a-child-insurance-plan.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Child Savings Policy</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://cdn2.vectorstock.com/i/1000x1000/73/41/family-insurance-concept-with-parents-and-kids-vector-27257341.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Family Insurance Policy</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://cms-img.coverfox.com/life-insurance-while-planning-retirement.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Retirement Plans</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://www.policybachat.com/ArticlesImages/1200.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Annuity Plans</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://cms-img.coverfox.com/personalize-two-wheeler-insurance-policy.webp" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Bike Insurance Plan</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://static.toiimg.com/thumb/msid-87297456,width-1280,height-720,resizemode-4/.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Car Insurance Plan</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://img.money.com/2020/09/Money-Pets-Final-red2.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Pet Insurance Policy</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://png.pngtree.com/template/20190316/ourmid/pngtree-insurance-logo-vector-image_80261.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Fixed Maturity Policy</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-3">
-    <div class="card">
-     <img class="card-img-top" src="https://img.freepik.com/premium-vector/travel-insurance-flat-style-isometric-vector-illustration-health-insurance-concept_100456-7487.jpg" alt="Card image cap" height="175">
-      <div class="card-body">
-        <h5 class="card-title">Travel Insurance Policy</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <center><a href="#" class="btn btn-primary">More Details</a></center>
-      </div>
-    </div>
-  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 </div>
-{% include 'footer.html' %}
+
 {% endblock %}
